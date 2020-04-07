@@ -49,14 +49,9 @@ app.post('/article',function(req,res)
     textapi.sentiment({
         'url': req.body.url,
       }, function(error, response) {
-        if (error === null) {
-            
+       
             res.send(response);
-        }
-        else
-        {
-            res.send(error);
-        }
+       
       });
 });
 
